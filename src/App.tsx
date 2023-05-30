@@ -1,9 +1,21 @@
-import EstiloGlobal from './styles'
+import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import EstiloGlobal, { Container } from './styles'
+import Home from './Pages/Home'
+
 function App() {
+  const rotas = createBrowserRouter([
+    {
+      path: '/',
+      element: <Home />
+    }
+  ])
+
   return (
     <div className="App">
       <EstiloGlobal />
-      <h1>Olá, Mundo !</h1>
+      <Container>
+        <RouterProvider router={rotas} />
+      </Container>
     </div>
   )
 }
