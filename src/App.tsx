@@ -1,7 +1,8 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import EstiloGlobal, { Container } from './styles'
 import Home from './Pages/Home'
-
+import store from './Store'
+import { Provider } from 'react-redux'
 function App() {
   const rotas = createBrowserRouter([
     {
@@ -11,12 +12,12 @@ function App() {
   ])
 
   return (
-    <div className="App">
+    <Provider store={store}>
       <EstiloGlobal />
       <Container>
         <RouterProvider router={rotas} />
       </Container>
-    </div>
+    </Provider>
   )
 }
 
