@@ -1,2 +1,4 @@
-const ListaContatos = () => <h1>Lista de Contatos</h1>
+import Contatos from '../../Components/Contatos'
+
+const ListaContatos = () => <Contatos />
 export default ListaContatos

@@ -16,6 +16,9 @@ export const Container = styled.div`
   display: grid;
   grid-template-columns: 224px auto;
 `
+export const MainContainer = styled.div`
+  padding: 40px;
+`
 
 export const Campo = styled.input`
   border-radius: 8px;
@@ -27,6 +30,22 @@ export const Campo = styled.input`
   font-size: 14px;
   font-weight: bold;
   padding: 8px;
+`
+
+export const Botao = styled.button`
+  background-color: ${variaveis.azulEscuro};
+  font-size: 12px;
+  font-weight: bold;
+  color: ${variaveis.branco};
+  padding: 6px 12px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  margin-right: 8px;
+}
+`
+export const BotaoSalvar = styled(Botao)`
+  background-color: ${variaveis.verde};
 `
 
 export default EstiloGlobal

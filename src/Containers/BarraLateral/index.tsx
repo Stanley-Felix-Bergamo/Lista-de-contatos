@@ -1,12 +1,10 @@
 import { Campo } from '../../styles'
-import * as S from './styles'
+import { Aside } from './styles'
 
 const BarraLateral = () => (
-  <>
-    <S.Aside>
-      <Campo type="text" placeholder="Procurar" />
-    </S.Aside>
-  </>
+  <Aside>
+    <Campo type="text" placeholder="Procurar" />
+  </Aside>
 )
 
 export default BarraLateral
