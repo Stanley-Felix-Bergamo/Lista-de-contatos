@@ -6,9 +6,22 @@ const Contatos = () => {
   return (
     <MainContainer>
       <S.Card>
-        <S.Texto as="h2">Alberto Ferreira Santos</S.Texto>
-        <S.Texto>Alberto@hotmail.com</S.Texto>
-        <S.Texto>(16)92934-5032</S.Texto>
+        {estaEditando ? (
+          <>
+            <S.Msg>Editando contato: Alberto Ferreira Santos</S.Msg>
+          </>
+        ) : (
+          ''
+        )}
+        <label>Nome:</label>
+        <S.Input
+          placeholder="Alberto Ferreira Santos"
+          disabled={!estaEditando}
+        />
+        <label>E-mail:</label>
+        <S.Input placeholder="Alberto@outlook.com" disabled={!estaEditando} />
+        <label>Telefone:</label>
+        <S.Input placeholder="(16)9435-4392" disabled={!estaEditando} />
         <S.BarraAcaoes>
           {estaEditando ? (
             <>

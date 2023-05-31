@@ -8,9 +8,20 @@ export const Card = styled.div`
   background-color: ${variaveis.branco2};
   padding: 16px;
 `
+export const Input = styled.input`
+  border: none;
+  width: 100%;
+  background-color: ${variaveis.branco2};
+  font-family: 'Roboto Mono';
+  font-weight: 400;
+  font-size: 14px;
+  display: flex;
+`
 
-export const Texto = styled.p`
-  padding-top: 7px;
+export const Msg = styled.h2`
+  font-family: 'Roboto Mono';
+  padding-bottom: 18px;
+  color: ${variaveis.laranja};
 `
 
 export const BarraAcaoes = styled.div`

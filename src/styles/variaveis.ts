@@ -3,6 +3,7 @@ export default {
   sombra: 'rgba(0, 0, 0, 0.25)',
   vermelho: '#c23616',
   verde: '#44bd32',
+  laranja: '#E1A32A',
   branco: '#fff',
   branco2: '#fcfcfc',
   azul: '#1e90ff',
