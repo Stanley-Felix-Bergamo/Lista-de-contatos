@@ -6,7 +6,9 @@ export const Card = styled.div`
   width: 100%;
   border-radius: 16px;
   background-color: ${variaveis.branco2};
+  box-shadow: 0px 4px 4px ${variaveis.sombra};
   padding: 16px;
+  margin-top: 40px;
 `
 export const Input = styled.input`
   border: none;

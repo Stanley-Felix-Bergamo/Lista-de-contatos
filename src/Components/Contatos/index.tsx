@@ -1,44 +1,51 @@
 import { useState } from 'react'
-import { MainContainer, Botao, BotaoSalvar } from '../../styles'
+import { useDispatch } from 'react-redux'
+
+import { remove } from '../../Store/Reducers/Contatos'
+import ContatoClass from '../../Models/Contatos'
+
+import { Botao, BotaoSalvar } from '../../styles'
 import * as S from './styles'
-const Contatos = () => {
+
+type Props = ContatoClass
+
+const Contatos = ({ nome, email, telefone, id }: Props) => {
   const [estaEditando, setEstaEditando] = useState(false)
+  const dispatch = useDispatch()
+
   return (
-    <MainContainer>
-      <S.Card>
+    <S.Card>
+      {estaEditando ? (
+        <>
+          <S.Msg>Editando contato: {nome}</S.Msg>
+        </>
+      ) : (
+        ''
+      )}
+      <label>Nome:</label>
+      <S.Input disabled={!estaEditando} placeholder={nome} />
+      <label>Email:</label>
+      <S.Input disabled={!estaEditando} placeholder={email} />
+      <label>Telefone:</label>
+      <S.Input disabled={!estaEditando} placeholder={telefone.toString()} />
+      <S.BarraAcaoes>
         {estaEditando ? (
           <>
-            <S.Msg>Editando contato: Alberto Ferreira Santos</S.Msg>
+            <BotaoSalvar>Salvar</BotaoSalvar>
+            <S.BotaoRemoverCancelar onClick={() => setEstaEditando(false)}>
+              Cancelar
+            </S.BotaoRemoverCancelar>
           </>
         ) : (
-          ''
+          <>
+            <Botao onClick={() => setEstaEditando(true)}>Editar</Botao>
+            <S.BotaoRemoverCancelar onClick={() => dispatch(remove(id))}>
+              Remover
+            </S.BotaoRemoverCancelar>
+          </>
         )}
-        <label>Nome:</label>
-        <S.Input
-          placeholder="Alberto Ferreira Santos"
-          disabled={!estaEditando}
-        />
-        <label>E-mail:</label>
-        <S.Input placeholder="Alberto@outlook.com" disabled={!estaEditando} />
-        <label>Telefone:</label>
-        <S.Input placeholder="(16)9435-4392" disabled={!estaEditando} />
-        <S.BarraAcaoes>
-          {estaEditando ? (
-            <>
-              <BotaoSalvar>Salvar</BotaoSalvar>
-              <S.BotaoRemoverCancelar onClick={() => setEstaEditando(false)}>
-                Cancelar
-              </S.BotaoRemoverCancelar>
-            </>
-          ) : (
-            <>
-              <Botao onClick={() => setEstaEditando(true)}>Editar</Botao>
-              <S.BotaoRemoverCancelar>Remover</S.BotaoRemoverCancelar>
-            </>
-          )}
-        </S.BarraAcaoes>
-      </S.Card>
-    </MainContainer>
+      </S.BarraAcaoes>
+    </S.Card>
   )
 }
 

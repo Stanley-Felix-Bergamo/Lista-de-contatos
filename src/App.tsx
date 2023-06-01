@@ -3,6 +3,7 @@ import EstiloGlobal, { Container } from './styles'
 import Home from './Pages/Home'
 import store from './Store'
 import { Provider } from 'react-redux'
+
 function App() {
   const rotas = createBrowserRouter([
     {
