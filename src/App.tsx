@@ -3,12 +3,17 @@ import EstiloGlobal, { Container } from './styles'
 import Home from './Pages/Home'
 import store from './Store'
 import { Provider } from 'react-redux'
+import Novo from './Pages/Novo'
 
 function App() {
   const rotas = createBrowserRouter([
     {
       path: '/',
       element: <Home />
+    },
+    {
+      path: '/novo',
+      element: <Novo />
     }
   ])
 
