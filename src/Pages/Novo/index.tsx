@@ -3,7 +3,7 @@ import Formulario from '../../Containers/Formulario'
 
 const Novo = () => (
   <>
-    <BarraLateral />
+    <BarraLateral MostrarBotaoVoltar />
     <Formulario />
   </>
 )

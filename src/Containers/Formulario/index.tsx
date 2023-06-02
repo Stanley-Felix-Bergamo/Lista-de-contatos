@@ -1,14 +1,15 @@
-import { MainContainer } from '../../styles'
-import { Campo } from './styles'
+import { Container, Campo } from './styles'
 import { BotaoSalvar } from '../../styles'
 const Formulario = () => (
-  <MainContainer>
+  <Container>
     <h1>Nova Tarefa</h1>
-    <Campo type="text" placeholder="Nome" />
-    <Campo type="text" placeholder="E-mail" />
-    <Campo type="text" placeholder="Telefone" />
+    <Campo>
+      <input type="text" placeholder="Nome Completo" />
+      <input type="text" placeholder="E-mail" />
+      <input type="text" placeholder="Telefone" />
+    </Campo>
     <BotaoSalvar>Cadastrar</BotaoSalvar>
-  </MainContainer>
+  </Container>
 )
 
 export default Formulario

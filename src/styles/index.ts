@@ -14,7 +14,7 @@ const EstiloGlobal = createGlobalStyle`
 `
 export const Container = styled.div`
   display: grid;
-  grid-template-columns: 224px auto;
+  grid-template-columns: 300px auto;
 `
 export const MainContainer = styled.main`
   padding: 0 40px;
