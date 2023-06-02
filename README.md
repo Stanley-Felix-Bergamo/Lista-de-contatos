@@ -1,5 +1,9 @@
-# Lista de contatos <img align="right" src="https://img.shields.io/static/v1?label=STATUS&message=Está %20Em andamento &color=red&style=for-the-badge"/>
+# Lista de contatos <img align="right" src="https://img.shields.io/static/v1?label=STATUS&message=Está %20pronto &color=green&style=for-the-badge"/>
+<div align="center" >
+    <img width="725rem" src="https://servidor-estaticos-ten.vercel.app/ListaContatos.png" alt="imagem">
+</div>
 
+> Para ver o projeto rodando, você pode acessar este [Link](https://lista-de-contatos-bice-tau.vercel.app/).
 <h2>💻 Tecnologias utilizadas</h2>
 
 <div style="display: inline_block">
