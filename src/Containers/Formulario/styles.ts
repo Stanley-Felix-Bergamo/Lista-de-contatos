@@ -17,4 +17,8 @@ export const Campo = styled.div`
     margin-top: 16px;
     padding: 8px 20px;
   }
+
+  button {
+    margin-top: 20px;
+  }
 `
